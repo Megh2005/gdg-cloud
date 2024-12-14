@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Badge Cloud @ DevFest Kolkata</title>
+    <meta
+      name="description"
+      content="Social Media Badge Generator - GCCD Kolkata 2024"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="attendee.png">
+    <link
+      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/icon?family=Google+Sans:400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header style="padding: 1rem">
+      <div class="title">Cloud @ DevFest Kolkata 2024 Badge Generator</div>
+    </header>
+
+    <div class="main-container">
+      <div class="input-panel">
+        <div class="input">
+          <label>Profile Picture</label>
+          <button class="button" onclick="uploadImage()">Upload Image</button>
+          <input
+            class="profile-input"
+            type="file"
+            accept="image/*"
+            onchange="upload(event)"
+            hidden
+          />
+        </div>
+        <div class="input">
+          <label>Image Shape</label>
+          <div class="select-container">
+            <div
+              class="select"
+              id="original"
+              selected
+              onclick="changeShape('original')"
+            >
+              Original
+            </div>
+            <div class="select" id="square" onclick="changeShape('square')">
+              Square
+            </div>
+          </div>
+        </div>
+        <div class="input">
+          <h2>🎉 Cloud @ DevFest Kolkata 2024</h2>
+        </div>
+      </div>
+      <div class="preview-panel">
+        <canvas></canvas>
+        <div class="download-fab" onclick="download()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            fill="#fff"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              d="M16.59 9H15V4c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v5H7.41c-.89 0-1.34 1.08-.71 1.71l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.63-.63.19-1.71-.7-1.71zM5 19c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55           0-1 .45-1 1z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
